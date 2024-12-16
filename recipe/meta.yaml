@@ -1,5 +1,5 @@
 {% set name = "types-pycurl" %}
-{% set version = "7.45.3.20240421" %}
+{% set version = "7.45.4.20241216" %}
 
 
 package:
@@ -7,25 +7,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-pycurl-{{ version }}.tar.gz
-  sha256: 0d5b3b9243e3940e26b782c1cdc0b2438d244ee2e8dcde09cf523635a42ff406
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: ce5ad0978e09ef43ee97b54ac68c183eda27ee0c981f70ec3f1b867ff07611f4
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python {{ python_min }}
     - pip
-    - python >=3.6
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   commands:
     - test -f $SP_DIR/pycurl-stubs/__init__.pyi
-
+  requires:
+    - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/python/typeshed
