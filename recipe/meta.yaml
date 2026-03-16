@@ -1,5 +1,5 @@
 {% set name = "types-pycurl" %}
-{% set version = "7.45.7.20251101" %}
+{% set version = "7.45.7.20260316" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 207f13450b49ef6b94189e4a8d8eedb053c2ad49d9f631fc66c2a819b76751e9
+  sha256: 8fd62f733ada1ffd0188858e226687a3162b9ad2075e04139f2193dd63243b0f
 
 build:
   number: 0
