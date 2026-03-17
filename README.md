@@ -3,11 +3,13 @@ About types-pycurl-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/types-pycurl-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/python/typeshed
+Home: https://pypi.org/project/types-pycurl
 
 Package license: Apache-2.0 AND MIT
 
 Summary: Typing stubs for pycurl
+
+Development: https://github.com/python/typeshed/tree/main/stubs/pycurl
 
 Current build status
 ====================
