@@ -29,13 +29,15 @@ requirements:
 tests:
   - package_contents:
       site_packages:
-        - pycurl.pyi
+        - pycurl-stubs/__init__.pyi
   - requirements:
       run:
         - mypy
+        - pip
         - pycurl
         - python ${{ python_min }}.*
     script:
+      - pip check
       - mypy -p pycurl
 
 about:
