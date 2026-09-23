@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "7.47.0.20260703"
+  version: "7.48.0.20260923"
 
 package:
   name: types-pycurl
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/types-pycurl/types_pycurl-${{ version }}.tar.gz
-  sha256: c20cb9c08bd3ef4a1b2b0ba5ac8eb11a0029c5c2a538ecdf8563eec4e46dbf68
+  sha256: d12803f4883ca57fffcd9fdf104d76daa079adaf6d225963bbe75b7de4b40aeb
 
 build:
   number: 0
